@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'new';
+    src: url('../font/OstrichSans-Light.otf') format('opentype');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #F2F2F2;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 7vh;
+    height: auto;
+    max-height: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    padding: 5px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+ul:hover,
+span:hover {
+    cursor: pointer;
+}
+
+.navbar span, .navbar i {
+    margin-left: 25px;
+    color: #0F1926;
+    
+}
+
+.menuOptions:hover{
+    color: #0F1926;
+    text-decoration: underline;
+}
+
+i:hover {
+    color: #590E22;
+    
+}
+
+a{
+    text-decoration: none;
+    color:#0F1926;
+}
+
+.wpp{
+    text-decoration: none;
+}
+
+#exchange-rates {
+    color:#F2F2F2; 
+    padding: 8px; 
+    border-radius: 5px; 
+    margin-left: 20px; 
+    font-size: 0.9em; 
+    background-color: rgba(54, 54, 54, 0.2); 
+    backdrop-filter: blur(5px); 
+}
+
+
+
+
+header {
+    background-image: url('../media/newCover.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'new';
+    font-size: 95px;
+    padding: 25px;
+}
+
+.subtitle {
+    font-family: 'new';
+    padding: 5px;
+}
+
+.btn {
+    background-color: #e8a90b;
+    color: #0F1926;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.content {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.serviços {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.box {
+    background-color: #590E22;
+    width: calc(25% - 10px);
+    margin: 5px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.box:hover {
+    background-color: #0F1926;; /* Cor de fundo diferente quando o mouse passa sobre */
+    transform: translateY(-5px); /* Efeito de salto */
+    cursor: pointer;
+}
+
+.descrição {
+    color: #F2F2F2;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.service {
+    color: #fff;
+}
+
+.sobre-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sobre, .contact-form {
+    flex: 1;
+    margin: 10px;
+}
+
+.professionalPic {
+    width: 30vh;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #590E22;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #e8a90b;
+}
+
+.wpp{
+    width: 30vh;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    background-color:#e8a90b;
+    border: none;
+    border-radius: 8px;
+}
+
+.wpp:hover{
+    cursor: pointer;
+    background-color: #916800;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-menu {
+    display: none; /* Inicialmente oculto */
+    font-size: 24px; /* Tamanho do ícone */
+    cursor: pointer;
+    text-align: end;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1px;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+    .hamburger-menu {
+        margin-right: 8%;
+        width: 10vh;
+        border: none;
+        display: block;
+        text-align: center;
+    }
+
+    #nav-links {
+        display: none; /* Ocultar os links de navegação em telas pequenas */
+    }
+
+    #nav-links.active {
+        display: block; /* Mostrar os links quando o menu sanduíche for clicado */
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    .logo {
+        width: 10vh;
+        padding: 7px;
+    }
+
+    #exchange-rates{
+        display: none;
+    }
+
+    .contact-form {
+        display: block;
+    }
+
+    header {
+        height: 700px;
+        padding: 25px;
+    }
+
+    
+
+    .sobre-form-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sobre, .contact-form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .serviços .box{
+        width: 100%;
+    }
+
+    
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .serviços .box {
+        width: 40%;
+    }
+    
+    .sobre, .contact-form {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos para desktops e telas grandes */
+}
+
+
+
